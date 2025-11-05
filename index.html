@@ -11,15 +11,15 @@
 
         fetch('http://localhost:8000/account/coins/?username=alex', {
 
-        method: 'GET',
         headers: {
 
         'Authorization': `Bearer ${"123ABC"}`
         }
         })
         .then(function(response) {
+            document.getElementById('data-display').innerText = JSON.stringify(response.json());
             return response.json();
-            document.getElementById('data-display').innerText = response.json();
+            
         })
         .then(function(myJson) {
             console.log(myJson);
