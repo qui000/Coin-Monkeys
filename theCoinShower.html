@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch Data from Java</title>
+</head>
+<body>
+    <h1>Data from Java Backend</h1>
+    <p id="data-display"></p>
+
+    <script>
+
+        fetch('http://localhost:8000/account/coins/?username=alex', {
+
+        method: 'GET',
+        headers: {
+
+        'Authorization': `Bearer ${"123ABC"}`
+        }
+        })
+        .then(function(response) {
+            return response.json();
+            document.getElementById('data-display').innerText = response.json();
+        })
+        .then(function(myJson) {
+            console.log(myJson);
+        });
+
+    </script>
+</body>
+</html>
