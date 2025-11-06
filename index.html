@@ -9,7 +9,7 @@
 
     <script>
 
-        fetch('http://localhost:8000/account/coins/?username=alex', {
+        fetch("http://localhost:8000/account/coins/?username=alex", {
 
         headers: {
 
@@ -18,7 +18,7 @@
         })
 
         .then(res => res.json())
-        .then(data => document.getElementById("data-display").innerHTML)
+        .then(data => document.getElementById("data-display").innerHTML = data)
 
     </script>
 </body>
