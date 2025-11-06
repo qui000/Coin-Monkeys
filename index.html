@@ -13,17 +13,12 @@
 
         headers: {
 
-        'Authorization': `Bearer ${"123ABC"}`
+        Authorization: "123ABC"
         }
         })
-        .then(function(response) {
-            document.getElementById('data-display').innerText = JSON.stringify(response.json());
-            return response.json();
-            
-        })
-        .then(function(myJson) {
-            console.log(myJson);
-        });
+
+        .then(res => res.json())
+        .then(data => document.getElementById("data-display").innerHTML)
 
     </script>
 </body>
